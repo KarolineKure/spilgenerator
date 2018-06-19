@@ -1,0 +1,889 @@
+/*GOBAL*/
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'cabin', sans-serif;
+    color: whitesmoke;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'lobster', 'cursive';
+    color: whitesmoke;
+}
+
+/*FOSIDE STYLING*/
+
+/* Regler for hele forsiden */
+
+.forside {
+    position: relative;
+    background-color: black;
+}
+
+/* logo placering */
+
+.logo-forside {
+    position: absolute;
+    max-width: 25%;
+    top: 45%;
+    left: 37.5%;
+    z-index: 1;
+}
+
+/* overskrifter */
+.vester,
+.fredens {
+    font-family: 'lobster', 'cursive';
+    color: whitesmoke;
+    font-size: 60px;
+    text-decoration: underline;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.vester {
+    top: 10%;
+}
+
+.fredens {
+    top: 65%;
+}
+
+/*beskrivelse af caféerne */
+.vesterp,
+.fredensp {
+    font-size: 15px;
+    color: whitesmoke;
+    text-decoration: none;
+    position: absolute;
+    font-style: italic;
+    text-align: center;
+    left: 5%;
+    right: 5%;
+}
+
+.vesterp {
+    top: 18%;
+}
+
+.fredensp {
+    top: 72%;
+}
+.words {
+    color: white;
+    font-size: 27px;
+    margin-top: 5px;
+}
+
+/* billeder */
+.vestergade,
+.fredensgade {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: -1px;
+    height: 50vh;
+}
+
+/* besøg knapper */
+
+.b-vestergade,
+.b-fredensgade {
+    color: white;
+    border: 3px solid #ff9900;
+    border-radius: 15px;
+    padding: 5px 2px;
+    text-decoration: none;
+    max-width: 40%;
+    position: absolute;
+    text-align: center;
+    left: 30%;
+    right: 30%;
+    font-size: 18px;
+}
+
+.b-vestergade {
+    top: 35%;
+}
+
+.b-fredensgade {
+    top: 90% ;
+}
+
+/*åbningstider */
+.abningstider-vestergade,
+.abningstider-fredensgade {
+    display: none;
+}
+
+/* laptop forsidebilleder */
+.vestergade-web,
+.fredensgade-web {
+    display: none;
+}
+
+/* CAFÈ STYLING */
+
+/* Global sidestyling */
+.vestergade-styling,
+.fredensgade-styling {
+    background-color: #ff9900;
+}
+
+h2 {
+    text-decoration: underline;
+    text-align: center;
+    font-size: 50px;
+    margin: 0;
+}
+
+p {
+    color: #383b55;
+}
+
+/* HEADER */
+
+/* baggrundsbillede */
+
+header {
+    margin-top: -7px;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+}
+
+.header-vestergade {
+    background-image: url(../images/vestergade-header.jpg);
+    background-position: center;
+}
+
+.header-fredensgade {
+    background-image: url(../images/fredensgade-header.jpg);
+    background-position: left;
+}
+
+.logo-header {
+    width: 30%;
+    position: absolute;
+    top: 35px;
+    left: 35%;
+}
+
+/* besøg den anden café knap */
+.b-knap {
+    position: absolute;
+    color: white;
+    background-color: #ff9900;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    border-bottom-right-radius: 10px;
+    padding: 0 10px 8px 5px;
+}
+
+/* Vestergade */
+.overskrift {
+    font-size: 70px;
+    text-decoration: underline;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+/* Fredensgade */
+.overskrift2 {
+    font-size: 62px;
+    text-decoration: underline;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+/* NAVIGATIONSBAR*/
+@media (max-width: 767px) {
+    .navigation {
+        width: 0;
+        overflow: hidden;
+        position: fixed;
+        height: 100%;
+        z-index: 1;
+        transition: width 0.3s ease;
+    }
+
+    #main-navigation:target {
+        width: 100%;
+        font-size: 22px;
+        font-family: lobster;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    li {
+        background-color: #ff9900;
+        color: #383b55;
+        margin: 0;
+        text-align: center;
+        padding: 3%;
+        text-decoration: none;
+        border-bottom: 1px solid white;
+    }
+
+    ul {
+        list-style: none;
+        text-decoration: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .bar {
+        width: 35px;
+        height: 5px;
+        background-color: #ff9900;
+        margin: 6px 0px 0 0;
+        top: 10px;
+        position: relative;
+        left: 90%;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .luk {
+        text-align: right;
+        font-size: 28px;
+        padding: 2%;
+        border-bottom: none;
+        margin-bottom: -55px;
+    }
+}
+
+/* info cirkler */
+.info {
+    display: flex;
+    justify-content: center;
+}
+
+.fact {
+    border: 7px solid white;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 80px;
+    font-size: 17px;
+    color: #717a8b;
+    margin-bottom: 0;
+    margin-right: 10px;
+}
+
+.regler {
+    width: 80px;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+/* om os section */
+.omos {
+    text-align: center;
+    width: 100%;
+}
+
+/*Reserver bord*/
+.bookbord {
+    position: relative;
+}
+
+.book {
+    width: 100%;
+    text-align: center;
+}
+
+.bord {
+    top: 2%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.bord h2 {
+    font-size: 40px;
+}
+
+.bord p {
+    width: 100%;
+    font-size: 14px;
+}
+
+.reserver-knap {
+    position: absolute;
+    left: 20%;
+    width: 60%;
+    background: white;
+    color: #383b55;
+}
+
+.reserver-knap a {
+    text-decoration: underline;
+    font-size: 22px;
+}
+
+.book-beskrivelse{
+        color: white;
+        text-align: center;
+}
+
+/* Vores spil */
+.spil-reol {
+    width: 100%;
+    margin-bottom: 0;
+}
+.vores-spil {
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 6px;
+    margin: 2px 6px 2px 6px;
+}
+
+/* spilgenerator */
+.spil, input {
+    width: 40%;
+    margin: 10px 10px 10px 6%;
+    border: 2px solid #717a8b;
+    background: white;
+    font-size: 15px;
+    color: #717a8b;
+}
+
+/* søg spil */
+#myInput {
+    width: 87%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 8px 0 8px 4px; /* Add some padding */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 85%;
+  border: 1px solid #717a8b;
+  font-size: 15px;
+    margin: 10px 10px 10px 30px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #717a8b;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #717a8b;
+}
+
+/* Menukort */
+#toggle,
+#toggle2,
+#toggle3 {
+    display: none;
+}
+
+.menuen {
+    width: 100%;
+    background-color: #333955;
+    text-align: center;
+    text-decoration: underline;
+}
+
+h3 {
+    background: #333955;
+    padding: 3%;
+    margin: 0;
+    border-bottom: 2px solid white;
+    color: white;
+    font-family: lobster;
+    font-size: 30px;
+}
+
+label {
+    font-size: 35px;
+    z-index: 1;
+    float: right;
+    position: relative;
+    top: -55px;
+    right: 20px;
+    clear: both;
+    color: #ff9900;
+}
+
+.kolddrik {
+    text-align: left;
+    font-size: 23px;
+    width: 100%;
+    background-color: #ff9900;
+    display: block;
+}
+
+.kolddrik p {
+    color: white;
+    display: none;
+    padding: 3%;
+    margin: 0%;
+    max-width: 90%;
+}
+
+#toggle:checked + .kolddrik p {
+    display: block;
+}
+
+#toggle2:checked + .kolddrik p {
+    display: block;
+}
+
+#toggle3:checked + .kolddrik p {
+    display: block;
+}
+
+.vare {
+    font-size: 18px;
+}
+
+.pris {
+    float: right;
+
+}
+
+picture {
+    display: none;
+}
+
+/*Footer */
+footer {
+    text-align: center;
+    color: #383b55;
+}
+
+footer h4 {
+    color: #383b55;
+}
+
+table {
+    width: 50%;
+    margin-left: 25%;
+}
+
+
+.kontrol {
+    width: 30%;
+    margin: 10px;
+}
+
+a {
+    color: #383b55;
+    text-decoration: underline;
+}
+
+.socialmedia {
+    margin-top: 8%;
+}
+
+.insta,
+.face {
+    width: 10%;
+}
+
+.partner {
+    display: none;
+}
+
+/*TABLET*/
+@media (min-width: 768px) {
+    /*FORSIDE*/
+    .vester,
+    .fredens {
+        font-size: 100px;
+    }
+
+    .vesterp,
+    .fredensp {
+        font-size: 26px;
+        left: 5%;
+        right: 5%;
+        text-align: center;
+    }
+
+    .vesterp {
+        top: 18%;
+    }
+
+    .fredensp {
+        top: 75%;
+    }
+
+    .b-vestergade,
+    .b-fredensgade {
+        text-align: center;
+        left: 30%;
+        font-size: 36px;
+    }
+
+    .b-vestergade {
+        top: 30%;
+    }
+
+    .b-fredensgade {
+        top: 87%;
+    }
+    
+    .logo-forside {
+        position: absolute;
+        top: 39%;
+        max-height: 220px;
+        max-width: 220px;
+    }
+    
+    /* NAVIGATIONSBAR */
+    .luk {
+        display: none;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    ul a {
+        text-decoration: none;
+        float: left;
+        width: 15%;
+        display: inline-block;
+        margin: 6% 2.5% 0%;
+        font-family: lobster;
+        font-size: 27px;
+        white-space: nowrap;
+        position: relative;
+        right: 20px;
+        color: white;
+    }
+
+    ul img {
+        width: 140px;
+        position: relative;
+        top: -40px;
+        margin: 1%;
+        right: 20px;
+    }
+
+    /* HEADER */
+    header {
+        margin-top: -16px;
+    }
+    
+    .logo-header {
+        display: none;
+    }
+
+    .overskrift, .overskrift2 {
+        font-size: 100px;
+    }
+    
+    /* info cirkler*/
+    .fact {
+        font-size: 35px;
+        height: 150px;
+        width: 150px;
+        line-height: 150px;
+        margin-right: 40px;
+    }
+
+    .regler {
+        margin-left: 45px;
+    }
+
+    /* om os */
+    .omos {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    /* Book bord */
+    .bord {
+        top: 10%;
+        color: white;
+    }
+
+    .bord h2 {
+        font-size: 90px;
+    }
+    
+    .reserver-knap a {
+        font-size: 40px;
+    }
+        
+    .reserver-regler {
+        color: #383b55;
+    }
+    
+    .bord p {
+    font-size: 22px;
+}
+
+    /*spilibliotek*/
+    .spil-reol {
+        width: 80%;
+        margin-left: 12%;
+    }
+    .vores-spil {
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    .spil-valg {
+        margin-left: 15%;
+        margin-bottom: 5%;
+    }
+    
+    .allespil {
+        width: 83%;
+    }
+
+    /* Menukort */
+    .menukort {
+        display: none;
+    }
+
+    picture {
+        display: inline;
+    }
+
+    picture img {
+        width: 100%;
+        margin: 0;
+    }
+
+    .menuen {
+        font-size: 50px
+    }
+    
+    .vestergade-bar {
+        width: 80%;
+        margin-left: 12%;
+    }
+    /*footer */
+    footer {
+        display: flex;
+        font-size: 15px;
+        padding: 3% 0 3% 0;
+
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    .abningstider {
+        min-width: 30%;
+    }
+
+    .kontrol {
+        width: 30%;
+    }
+
+    .partner,
+    img {
+        width: 70%;
+        display: inline-block;
+    }
+
+    .insta,
+    .face {
+        width: 20%;
+    }
+
+    .socialmedia {
+        width: 100%;
+        display: inline-block;
+        margin-top: 25%;
+    }
+
+}
+
+/*LAPTOP*/
+@media (min-width: 1024px) {
+    .vestergade,
+    .fredensgade {
+        display: none;
+    }
+
+    .vestergade-web,
+    .fredensgade-web {
+        display: inline-block;
+        width: 50%;
+        height: 100vh;
+        margin: -1px;
+        filter: grayscale(100%);
+    }
+
+    .vestergade-web:hover,
+    .fredensgade-web:hover {
+        filter: none;
+        transition: filter .5s ease-in-out;
+    }
+
+    .logo-forside {
+        width: 20%;
+        left: 40%;
+        max-width: none;
+        max-height: none;
+    }
+
+    .vester,
+    .fredens {
+        font-size: 90px;
+        top: 20%;
+    }
+
+    .vester {
+        left: 22%;
+    }
+
+    .fredens {
+        left: 77%;
+    }
+
+    .vesterp,
+    .fredensp {
+        top: 30%;
+        font-size: 20px;
+        width: 40%;
+    }
+
+    .vesterp {
+        left: 3%;
+    }
+    .fredensp {
+        left: 57%;
+    }
+
+    .b-vestergade,
+    .b-fredensgade {
+        width: 25%;
+        font-size: 25px;
+        top: 76%;
+    }
+
+    .b-vestergade {
+        left: 9%
+    }
+
+    .b-fredensgade {
+        left: 63%
+    }
+
+    .abningstider-vestergade,
+    .abningstider-fredensgade {
+        display: block;
+        position: absolute;
+        font-size: 20px;
+        top: 58%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .abningstider-vestergade {
+        left: 17%;
+    }
+    
+    .abningstider-fredensgade {
+        width: 15%;
+        right: 8%;
+    }
+
+    /*NAVIGATIONSBAR */
+    ul img {
+        width: 180px;
+        position: relative;
+        top: -50px;
+        margin: 1%;
+        right: 10px;
+    }
+
+    ul a {
+        font-size: 35px;
+        margin-top: 5.5%;
+    }
+
+    /*oversrkift */
+    .overskrift, .overskrift2 {
+        font-size: 120px;
+    }
+
+    /*cirkler */
+    .info {
+        width: 65%;
+        position: absolute;
+        left: 35%;
+    }
+
+    /* om os */
+    .omos {
+        width: 30%;
+        margin-left: 5%;
+        min-height: 300px;
+    }
+
+    /* Reservering */
+    .bord h2 {
+        font-size: 100px;
+    }
+
+    .bord p {
+        font-size: 25px;
+    }
+    
+    /*SPILBIBLIOTEK*/
+    .vores-spil {
+        width: 70%;
+        margin-left: 15%;
+    }
+
+    .spil-valg {
+        margin-left: 5%;
+    }
+    .spil {
+        width: 20%;
+    }
+    .allespil {
+        width: 87%;
+    }
+
+    /* menukort */
+    .menuen {
+        font-size: 60px;
+    }
+    
+    /*footer*/
+    .partner {
+        width: 20%;
+    }
+    .socialmedia {
+        width: 45%;
+        margin-top: 10%;
+    }
+}
